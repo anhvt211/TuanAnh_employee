@@ -2,7 +2,7 @@ from odoo import fields, models, api
 
 class Experience_wizard(models.TransientModel):
     _name = 'experience.wizard'
-    _description = 'Update years of experience for employees'
+    _description = 'Update years of experience for employees1'
     # employee_ids = fields.Many2many('hr.employee', string="Employees")
     years_of_experience = fields.Integer(string="Years of Experience")
     # message = fields.Text(string="Message", default="Apply updating on the selected record(s)?")

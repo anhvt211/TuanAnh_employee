@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_do_something" class="oe_stat_button" icon="fa-briefcase"
+                            type="object" groups="employee_plus.group_hr_employee_experience_manager">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field string="Update" name="years_of_experience" readonly="1"/>
+                            </span>
+                            <span class="o_stat_text">Update</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="after">
+                    <field name="years_of_experience"/>
+                </xpath>
+            </field>
+        </record>
+
+<!--        <record id="view_employee_tree_inherit" model="ir.ui.view">-->
+<!--            <field name="name">employee.tree.inherit</field>-->
+<!--            <field name="model">hr.employee</field>-->
+<!--            <field name="inherit_id" ref="hr.view_employee_tree"/>-->
+<!--        </record>-->
+
+
+
+
+    </data>
+</odoo>

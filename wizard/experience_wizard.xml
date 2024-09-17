@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_experience_wizard_form" model="ir.ui.view">
+            <field name="name">experience.wizard.form</field>
+            <field name="model">experience.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update Experience">
+                    <group>
+
+                        <field name="years_of_experience"/>
+                    </group>
+                    <footer>
+                        <button string="Set" type="object" name="set_experience" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_experience_wizard" model="ir.actions.act_window">
+            <field name="name">Update Experience</field>
+            <field name="res_model">experience.wizard</field>
+            <field name="binding_model_id" ref="model_hr_employee"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="view_experience_wizard_form"/>
+        </record>
+    </data>
+</odoo>

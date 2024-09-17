@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_experience_manager,employee.experience.manager,model_hr_employee,group_hr_employee_experience_manager,1,1,1,1
+access_experience_wizard,experience_wizard,model_experience_wizard,base.group_user,1,1,1,1
